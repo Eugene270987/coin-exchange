@@ -1,0 +1,51 @@
+.navbar-item {
+  padding-left: 40px;
+  &__image {
+    transition: transform 0.3s;
+    animation-duration: 0.3s;
+    animation-name: rotateAnimation;
+    animation-timing-function: linear;
+    animation-play-state: paused;
+  }
+
+  &__link {
+    color: #007b47;
+    position: relative;
+    &::after{
+      content: "";
+      width: 0;
+      display: block;
+      height: 2px;
+      top: 100%;
+      left: 50%;
+      position: absolute;
+      background-color: #b8860b;
+      transition: all 0.3s;
+    }
+    &.active::after{
+      content: "";
+      width: 85%;
+      top: 100%;
+      left: 46px;
+      display: block;
+      height: 2px;
+      position: absolute;
+      background-color: #b8860b;
+    }
+    &:hover .navbar-item__image {
+      animation-play-state: running;
+    }
+    &.active {
+      color: #b8860b;
+    }
+  }
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}

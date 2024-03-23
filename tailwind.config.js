@@ -13,9 +13,11 @@ module.exports = {
         'green-bg-color': '#057c48',
         'main-bg-color': '#ffffff',
         'grey-bg-color': '#C0C0C0',
+      },
+      active: {
+        'color': '#b8860b',
       }
     },
   },
   plugins: [],
 }
-

@@ -11,7 +11,7 @@ function Navigation () {
 
     return (
         <nav className="navbar">
-            <ul className="navbar-list py-2 flex flex-wrap items-center justify-center gap-8">
+            <ul className="navbar-list py-2 flex flex-wrap items-center justify-center gap-4">
                 {pages.map((page, index) => (
                     <NavigationItem key={index} name={page.name} path={page.path}/>
                 ))}
